@@ -13,13 +13,14 @@
                 <li><a href="archivo1.html">Ingresa al archivo 1</a></li>
                 <li><a href="archivo2.html">Ingresa al archivo 2</a></li>
                 <li><a href="archivo3.html">Ingresa al archivo 3</a></li>
+                <li><a href="tabla.html">Ingresa a la tabla</a></li>
             </ul>
         </nav>
     </header>
-    <form action="Controlador" method="get">
+    <form action="Controlador" method="post" enctype="multipart/form-data">
         <div>
             <label for="edad">Ingrese su edad:</label>
-            <input type="number" min="0" max="17" step="1" value="6" name="edad" id="edad" disabled>
+            <input type="number" min="0" max="17" step="1" value="17" name="edad" id="edad" autofocus>
         </div>
         <div>
             <label for="nombre">Ingrese su nombre:</label>
@@ -36,6 +37,54 @@
         <div>
             <label for="correo">Ingrese su correo:</label>
             <input type="text" name="correo" id="correo"  required pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" title="Por favor, ingresa un correo electrónico válido">
+        </div>
+        <div>
+            <label for="ciudad">Ingrese su ciudad:</label>
+            <select name="ciudad" id="ciudad" disabled>
+                <option value="1">Girón</option>
+                <option value="2" selected>Bucaramanga</option>
+                <option value="3">Floridablanca</option>
+                <option value="4">Piedecuesta</option>
+            </select>
+        </div>
+        <div>
+            <label>Ingrese su genero:</label>
+            
+            <label for="hombre">
+                <input type="radio" name="genero" id="hombre" value="hombre" checked> Hombre
+            </label>
+            
+            <label for="mujer">
+                <input type="radio" name="genero" id="mujer" value="mujer" required> Mujer
+            </label>
+        </div>
+        <div>
+            <label>Seleccione sus habilidades:</label>
+            <label for="html">
+                <input type="checkbox" name="habilidad" id="html" value="html" checked> HTML
+            </label>
+            <label for="git">
+                <input type="checkbox" name="habilidad" id="git" value="git" checked> GIT
+            </label>
+            <label for="cli">
+                <input type="checkbox" name="habilidad" id="cli" value="cli" checked> CLI
+            </label>
+            <label for="Js">
+                <input type="checkbox" name="habilidad" id="Js" value="JS"> Js
+            </label>
+            <label for="python">
+                <input type="checkbox" name="habilidad" id="python" value="python" checked> PYTHON
+            </label>
+            <label for="c#">
+                <input type="checkbox" name="habilidad" id="c#" value="c#" checked> C#
+            </label>
+            <label for="C++">
+                <input type="checkbox" name="habilidad" id="C++" value="c++"> C++
+            </label>
+        </div>
+        <div>
+            <label for="foto">Adjunte su foto:</label>
+            <input type="file" name="foto" id="foto" accept="image/*" multiple>
         </div>
         <div>
             <button type="submit">Guardar</button>
